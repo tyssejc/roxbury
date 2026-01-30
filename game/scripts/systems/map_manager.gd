@@ -21,10 +21,14 @@ var _terrain_data := {}
 ## Currently hovered tile
 var _hovered_tile: Vector2i = Vector2i(-1, -1)
 
+## Pathfinding grid
+var _astar: AStarGrid2D
+
 
 func _ready() -> void:
 	# Generate a test map on ready
 	generate_test_map()
+	_setup_pathfinding()
 	queue_redraw()
 
 
@@ -195,6 +199,7 @@ func _generate_terrain_at(x: int, y: int, rng: RandomNumberGenerator) -> Terrain
 			return Terrain.Type.GRASSLAND
 
 
+@warning_ignore("integer_division")
 func _add_river(rng: RandomNumberGenerator) -> void:
 	# Add a river from hills/mountains to the coast
 	# Find a starting point in the hills
@@ -289,3 +294,58 @@ func _smooth_coastline() -> void:
 
 	for pos in changes:
 		_terrain_data[pos] = changes[pos]
+
+
+## Setup A* pathfinding grid
+func _setup_pathfinding() -> void:
+	_astar = AStarGrid2D.new()
+	_astar.region = Rect2i(0, 0, map_width, map_height)
+	_astar.cell_size = Vector2(TILE_SIZE, TILE_SIZE)
+	_astar.diagonal_mode = AStarGrid2D.DIAGONAL_MODE_AT_LEAST_ONE_WALKABLE
+	_astar.default_compute_heuristic = AStarGrid2D.HEURISTIC_EUCLIDEAN
+	_astar.default_estimate_heuristic = AStarGrid2D.HEURISTIC_EUCLIDEAN
+	_astar.update()
+
+	# Mark impassable tiles and set movement costs
+	for x in range(map_width):
+		for y in range(map_height):
+			var pos := Vector2i(x, y)
+			var terrain: Terrain.Type = _terrain_data.get(pos, Terrain.Type.OCEAN)
+
+			if not Terrain.is_walkable(terrain):
+				_astar.set_point_solid(pos, true)
+			else:
+				var cost: float = Terrain.get_movement_cost(terrain)
+				_astar.set_point_weight_scale(pos, cost)
+
+	print("Pathfinding grid initialized")
+
+
+## Get a path between two tile positions (returns tile coordinates, not world positions)
+func find_path(from: Vector2i, to: Vector2i) -> Array[Vector2i]:
+	if not _astar:
+		return []
+
+	if not is_valid_tile(from) or not is_valid_tile(to):
+		return []
+
+	if _astar.is_point_solid(from) or _astar.is_point_solid(to):
+		return []
+
+	# Use get_id_path to get tile coordinates (not get_point_path which returns world positions)
+	var path: Array[Vector2i] = _astar.get_id_path(from, to)
+
+	# Skip the first point (current position)
+	if path.size() <= 1:
+		return []
+
+	return path.slice(1)
+
+
+## Check if a tile is passable for pathfinding
+func is_tile_passable(pos: Vector2i) -> bool:
+	if not _astar:
+		return false
+	if not is_valid_tile(pos):
+		return false
+	return not _astar.is_point_solid(pos)
