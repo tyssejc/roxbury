@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://main_scene"]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_main"]
+[ext_resource type="Script" path="res://scripts/camera_controller.gd" id="2_camera"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_main")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.5, 0.5)
+script = ExtResource("2_camera")
+
+[node name="World" type="Node2D" parent="."]
+
+[node name="PlaceholderMap" type="ColorRect" parent="World"]
+offset_left = -500.0
+offset_top = -500.0
+offset_right = 500.0
+offset_bottom = 500.0
+color = Color(0.2, 0.4, 0.2, 1)
+
+[node name="PlaceholderLabel" type="Label" parent="World"]
+offset_left = -200.0
+offset_top = -20.0
+offset_right = 200.0
+offset_bottom = 20.0
+horizontal_alignment = 1
+vertical_alignment = 1
+text = "Discovery Colony - Prototype
+WASD to pan, scroll to zoom"
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="DebugInfo" type="Label" parent="UI"]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 300.0
+offset_bottom = 100.0
+text = "Debug Info"

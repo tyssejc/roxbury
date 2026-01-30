@@ -518,36 +518,48 @@ This could be what separates Discovery Colony from other games in the genre.
 
 ## 8. Art & Aesthetic
 
-### Visual Style (Under Exploration)
+### Visual Style: Period-Authentic
 
-We want a **distinctive visual identity**, not generic realism. The goal is a style that's immediately recognizable and uniquely ours.
+Rather than imposing a modern stylized interpretation, we draw directly from the visual culture of the Age of Discovery itself. The aesthetic emerges from the period, making it distinctive *because* it's authentic.
 
-**Key Constraints:**
-- Distinctive, not generic
-- Stylized, but NOT cartoonish
-- Supports serious themes without undermining them
-- Period-appropriate feel
+**Core Insight (via "Vermeer's Hat"):**
+Vermeer's paintings are inextricable from the Age of Discovery—the beaver felt hats from North American pelts, the Chinese porcelain, the herring boats shaped by global cooling. The artists of the period were documenting a world being transformed by global trade and colonization. We can draw from that same wellspring.
 
-**Reference Point:**
-- *Ground of Aces* - Appreciated for having a distinct visual identity (happens to draw from Belgian graphic novels, but the distinctiveness is the key quality)
+**Visual Sources:**
+- **Dutch Golden Age painting** - Vermeer, de Hooch, van Ruisdael
+  - Rich interiors, careful light, everyday life elevated
+  - Global trade goods appearing in domestic scenes
+- **Period cartography** - Hand-drawn maps with decorative elements
+  - Sea monsters, compass roses, illustrated coastlines
+  - The beautiful inaccuracy of pre-satellite mapping
+  - Directly connects to our cartography game system
+- **Colonial-era documentation** - Botanical illustrations, expedition sketches
+  - John White's Roanoke watercolors
+  - Natural history illustrations
+  - Ship designs and harbor scenes
+- **Period portraits** - How people presented themselves
+  - Colonists, merchants, native peoples as depicted (and misdepicted)
+  - Clothing, tools, material culture
 
-**Characteristics to Explore:**
-- Strong visual identity that photographs well and is instantly recognizable
-- Style that supports the "historical document" feeling
-- Readable at various zoom levels (important for city-builders)
-- Connects naturally to the cartography system
-
-**Why Distinctive Style Matters:**
+**Why This Works:**
+- Distinctive without being cartoonish
+- Historically grounded—the style IS the subject matter
+- Connects naturally to cartography system (period maps as UI)
+- Educational value—players see authentic period aesthetics
+- Supports serious themes (this is how the era documented itself)
 - Unique in the city-builder genre
-- Easier to produce than photorealism (important for indie scope)
-- Ages better than attempts at realism
-- Marketing advantage—screenshots are memorable
 
-**To Explore Further:**
-- Research games with strong visual identities across genres
-- Look at historical maps and period illustrations for inspiration
-- Consider how style affects tone (must support serious themes)
-- Owner to do independent research and bring back references
+**Practical Application:**
+- UI elements styled as period documents (parchment, wax seals, ink)
+- Map view styled as actual period cartography
+- Building/character art inspired by period illustration styles
+- Color palette drawn from Dutch masters (earth tones, rich but muted)
+
+**To Develop:**
+- Gather reference images from period sources
+- Experiment with how period aesthetics translate to game UI/sprites
+- Consider: how much stylization is needed for gameplay clarity?
+- Let early prototyping inform the balance
 
 ### Audio
 - Period-appropriate music (but not intrusive)

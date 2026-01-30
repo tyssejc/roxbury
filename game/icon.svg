@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <rect width="128" height="128" fill="#2d5a27"/>
+  <path d="M64 20 L90 60 L64 55 L38 60 Z" fill="#8b4513" stroke="#5c3317" stroke-width="2"/>
+  <rect x="62" y="55" width="4" height="40" fill="#5c3317"/>
+  <ellipse cx="64" cy="100" rx="30" ry="10" fill="#1a4a1a"/>
+  <text x="64" y="120" font-family="serif" font-size="12" fill="#d4af37" text-anchor="middle">DC</text>
+</svg>
