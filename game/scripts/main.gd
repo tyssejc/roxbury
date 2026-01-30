@@ -122,4 +122,6 @@ func _on_tile_hovered(pos: Vector2i, terrain_type: Terrain.Type) -> void:
 
 
 func _on_tile_clicked(pos: Vector2i, terrain_type: Terrain.Type) -> void:
-	print("Clicked tile: %s at %s" % [Terrain.get_name(terrain_type), pos])
+	var props := Terrain.get_properties(terrain_type)
+	var terrain_name: String = props.get("name", "Unknown")
+	print("Clicked tile: %s at %s" % [terrain_name, pos])
