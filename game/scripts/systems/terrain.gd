@@ -150,7 +150,7 @@ static func get_color(type: Type) -> Color:
 
 
 ## Get display name
-static func get_name(type: Type) -> String:
+static func get_display_name(type: Type) -> String:
 	return PROPERTIES.get(type, {}).get("name", "Unknown")
 
 
