@@ -46,9 +46,9 @@ func _handle_pan(delta: float) -> void:
 
 func _handle_zoom(delta: float) -> void:
 	# Smoothly interpolate to target zoom
-	var current_zoom := zoom.x
-	if abs(current_zoom - _target_zoom) > 0.01:
-		var new_zoom := lerp(current_zoom, _target_zoom, 10.0 * delta)
+	var current_zoom: float = zoom.x
+	if absf(current_zoom - _target_zoom) > 0.01:
+		var new_zoom: float = lerpf(current_zoom, _target_zoom, 10.0 * delta)
 		zoom = Vector2(new_zoom, new_zoom)
 
 
