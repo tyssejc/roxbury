@@ -1,0 +1,11 @@
+# Godot
+.godot/
+*.uid
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
