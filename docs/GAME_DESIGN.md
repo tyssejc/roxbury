@@ -1,5 +1,5 @@
 # Discovery Colony
-## Game Design Document v0.1
+## Game Design Document v0.2
 
 ---
 
@@ -13,7 +13,13 @@ A survival city-builder set in the Age of Discovery (1500s-1600s). Players lead 
 - *Banished* - Survival city-building, population management, seasonal challenges
 - *Sid Meier's Colonization* - Colonial trade, independence, native relations
 - *Anno series* - Production chains, trade routes, beautiful settlements
-- *Frostpunk* - Difficult moral choices, event-driven narrative
+- *Frostpunk* - Difficult choices, event-driven narrative (but lighter tone)
+
+**Design Philosophy:**
+- **Historical authenticity** - Real nations, real dilemmas, real consequences
+- **Mirror, not lecture** - The game reflects player choices without moralizing
+- **Hopeful but honest** - Difficult situations, but the tone of Banished not Frostpunk
+- **Educational through experience** - Players understand history by living it
 
 ---
 
@@ -132,7 +138,39 @@ SURVIVE → GROW → TRADE → EXPAND → CHOOSE YOUR DESTINY
 - Multiple production buildings
 - Stone walls
 
-### 3.4 Seasons & Time
+### 3.4 Exploration & Cartography
+
+#### Fog of War
+The map begins largely unknown. Players see only the immediate landing area.
+
+#### Discovery Methods
+- **Scouting** - Send colonists or soldiers to explore (risky)
+- **Native Guides** - Trade for knowledge of the land (requires good relations)
+- **Expedition** - Organized exploration parties (expensive but thorough)
+
+#### The Cartography System
+Unlike most games, discovering territory doesn't give you a perfect satellite view.
+
+**Mapmakers** - A specialist colonist type who creates maps
+- Maps are hand-drawn, period-appropriate illustrations
+- Accuracy depends on mapmaker skill and time spent
+- Early maps may have errors, missing features, wrong distances
+- Maps improve over time with multiple surveys
+- Beautiful maps become a trade good (sell to Crown, other colonies)
+
+**Map Quality Levels:**
+1. **Rough Sketch** - General shapes, major features, many errors
+2. **Working Map** - Useful for navigation, some inaccuracies
+3. **Detailed Survey** - Reliable, shows resources and terrain
+4. **Master Cartography** - Near-perfect, a work of art
+
+**Visual Treatment:**
+- Player sees the world through their maps
+- Unexplored areas show stylized "here be dragons" illustrations
+- Map style evolves with technology and skill
+- Creates unique aesthetic different from typical fog of war
+
+### 3.5 Seasons & Time
 
 #### Time Scale
 - 1 game day = ~1 minute real time (adjustable)
@@ -219,7 +257,208 @@ We want to portray native peoples as complex societies with agency, not obstacle
 
 ---
 
-## 5. Events & Narrative
+## 5. Historical Authenticity & Moral Complexity
+
+This section addresses how we handle the difficult aspects of colonial history. Our goal is historical honesty without moralizing—the game should be a mirror that reflects player choices back to them.
+
+### 5.1 Design Principles
+
+**Show, Don't Preach**
+- No pop-ups saying "slavery is wrong"
+- Instead: show the human cost through gameplay systems
+- Let players draw their own conclusions from consequences
+
+**17th Century Framing**
+- Present choices as people of the era understood them
+- Economic arguments, religious justifications, legal frameworks of the time
+- Players should understand *why* people made these choices, not just judge them
+
+**Complexity Over Simplicity**
+- People are contradictory (Jefferson: slave owner AND "all men are created equal")
+- Benefits and costs coexist (native trade partnerships AND exploitation)
+- No purely good or evil choices—just choices with consequences
+
+**Earned Understanding**
+- Players who engage with slavery should understand its economic appeal
+- Players who exploit natives should feel the short-term benefits
+- Then they live with the long-term consequences
+- This creates deeper understanding than a lecture ever could
+
+### 5.2 Slavery System
+
+**Important:** Slavery is not required. Players can build successful colonies without it. But it exists as a historical reality and a choice.
+
+#### How It Works Mechanically
+
+**Acquisition:**
+- Purchase from slave traders (ships arrive periodically)
+- Prisoners from conflicts (native or European)
+- Costs money but provides labor without ongoing wages
+
+**Economic Reality:**
+Enslaved workers provide significant economic advantage:
+- No wages (only food, minimal shelter)
+- Assigned to labor-intensive work (sugar, tobacco, rice)
+- Work longer hours than free colonists
+- This is the brutal historical truth—it was profitable
+
+**The Costs (Not Morality Pop-Ups, But Systems):**
+
+*Immediate:*
+- Enslaved people are unhappy (affects efficiency over time)
+- Require overseers (uses free colonists unproductively)
+- Risk of resistance, sabotage, escape
+- Some colonists morally opposed (faction tension)
+
+*Social:*
+- Free laborers resent competition with unpaid labor
+- Class divisions emerge in colony
+- Religious colonists may protest
+- Native allies may view you differently
+
+*Long-term:*
+- Independence becomes harder (Crown may support slavery; rebels may not)
+- Enslaved population grows; resistance grows with it
+- Your colony's character is shaped by this choice
+- Abolition becomes progressively harder and more disruptive
+
+*External:*
+- Some European powers begin opposing slavery (historical timeline)
+- Abolitionist movements emerge
+- Trade partners may refuse to deal with slave colonies
+- Your reputation affects diplomacy
+
+#### Paths Forward
+
+**Abolition Arc:**
+If players choose to end slavery, it's not simple:
+- Economic disruption (who does this labor now?)
+- Compensation debates (enslaved people? former owners?)
+- Integration challenges (freed people become citizens?)
+- Resistance from those who profited
+- Potential for violence (historical civil conflicts)
+
+This should feel like a meaningful, difficult transition—not a button press.
+
+**Living With It:**
+Players who maintain slavery face escalating challenges:
+- Larger enslaved populations require more control
+- Resistance movements grow sophisticated
+- International pressure increases over time
+- The institution becomes harder to maintain
+
+**The Point:**
+Players should finish the game understanding:
+- Why slavery was economically attractive
+- Why it persisted despite moral opposition
+- Why ending it was so difficult and bloody
+- Why its legacy persists
+
+Not because we told them—because they experienced it.
+
+### 5.3 Native Relations (Expanded)
+
+#### Historical Complexity
+
+**What Natives Gained (Initially):**
+- Metal tools, weapons (genuine technological advantage)
+- New trade goods and markets
+- Alliances against traditional enemies
+- Some groups gained power relative to rivals
+
+**What Natives Lost:**
+- Land (through purchase, treaty, theft, war)
+- Population (disease, violence, displacement)
+- Autonomy (increasing European dominance)
+- Culture (missionary pressure, forced assimilation)
+
+#### Mechanical Representation
+
+**Trade is Genuinely Beneficial (Early)**
+- Native knowledge essential for survival (local crops, medicine, terrain)
+- Trade goods valuable to both parties
+- Military alliances protect both sides
+- This should feel like partnership
+
+**Expansion Creates Pressure**
+- Land is finite
+- Colonial growth conflicts with native territory
+- Treaties can be honored or broken
+- Breaking treaties has consequences (war, lost trade, lost knowledge)
+
+**Power Dynamics Shift**
+- Early game: natives are powerful, colonists are vulnerable
+- Mid game: rough parity, mutual benefit possible
+- Late game: colonial power grows, natives face pressure
+- This shift should feel earned and consequential
+
+**Disease**
+- Historical reality: European diseases devastated native populations
+- Not the player's "fault" but a consequence of contact
+- Affects native faction strength over time
+- Some native groups may blame colonists (historically accurate)
+
+**Multiple Outcomes:**
+- **Exploitation** - Broken treaties, land theft, forced labor → wealthy but unstable colony, native resistance
+- **Partnership** - Honored agreements, fair trade, cultural exchange → slower growth but stability, unique hybrid culture
+- **Conflict** - Open warfare, conquest → military costs, atrocities, international reputation
+- **Displacement** - Passive expansion, disease, economic pressure → natives decline without direct violence (but you're still responsible)
+
+### 5.4 The Crown & Colonial Ethics
+
+The Crown may demand things that conflict with player ethics:
+- Enforce slavery in the colony
+- Break treaties with natives for land
+- Persecute religious minorities
+- Exploit resources destructively
+
+**Player Agency:**
+- Obey (Crown favor, ethical cost)
+- Refuse (Crown disfavor, maintain principles)
+- Deceive (report compliance, act differently—risky)
+- Rebel (eventual independence path)
+
+### 5.5 Representation Guidelines
+
+**Native Peoples:**
+- Multiple distinct nations with names, cultures, goals
+- Not monolithic "natives" but Powhatan, Wampanoag, Cherokee, etc.
+- Leaders with personalities and agendas
+- Capable of diplomacy, trade, war, betrayal—full agency
+- Their perspective shown (why they make their choices)
+
+**Enslaved People:**
+- Individuals when possible, not just labor units
+- Resistance shown (escape, sabotage, rebellion)
+- Culture and community persist despite oppression
+- Abolition involves their agency, not just white saviors
+
+**Colonists:**
+- Varied motivations (profit, freedom, religion, adventure, desperation)
+- Varied ethics (abolitionists existed alongside slave traders)
+- Internal conflicts reflect historical debates
+
+### 5.6 What We're NOT Doing
+
+- **Sanitizing** - We don't pretend atrocities didn't happen
+- **Glorifying** - We don't make exploitation feel triumphant
+- **Moralizing** - We don't lecture players about right and wrong
+- **Simplifying** - We don't reduce complex history to good vs. evil
+- **Sensationalizing** - We don't dwell on violence for shock value
+
+### 5.7 The Goal
+
+A player who engages seriously with this game should come away with:
+- Deeper understanding of colonial era complexity
+- Appreciation for why people made difficult choices
+- Recognition of historical consequences we still live with
+- Their own conclusions, arrived at through experience
+
+This could be what separates Discovery Colony from other games in the genre.
+
+---
+
+## 6. Events & Narrative
 
 ### Random Events (Examples)
 - **Supply Ship Delayed** - Expected supplies don't arrive
@@ -240,7 +479,7 @@ We want to portray native peoples as complex societies with agency, not obstacle
 
 ---
 
-## 6. Victory & Endgame
+## 7. Victory & Endgame
 
 ### Victory Paths
 
@@ -277,28 +516,52 @@ We want to portray native peoples as complex societies with agency, not obstacle
 
 ---
 
-## 7. Art & Aesthetic
+## 8. Art & Aesthetic
 
-### Visual Style (TBD)
-Options to consider:
-- **Realistic** - Anno-style detailed 3D
-- **Stylized** - Northgard-style painterly
-- **Pixel Art** - Retro aesthetic, faster to produce
-- **Minimalist** - Abstract, focus on systems
+### Visual Style (Under Exploration)
+
+We want a **distinctive visual identity**, not generic realism. Current direction to explore:
+
+**Belgian Graphic Novel Inspiration**
+- Hergé (Tintin) - Clean lines, clear colors, readable at any scale
+- Moebius - Epic landscapes, detailed worlds
+- *Ground of Aces* - Modern example of this aesthetic in games
+
+**Potential Characteristics:**
+- Strong ink-like outlines
+- Flat or limited color palettes
+- Stylized but not cartoonish
+- Period-appropriate feel (like illustrations from the era)
+- Distinctive, immediately recognizable
+
+**Why This Direction:**
+- Unique in the city-builder genre
+- Connects to the cartography system (maps as art)
+- Easier to produce than photorealism
+- Ages better than attempts at realism
+- Supports the "historical document" feeling
+
+**To Explore Further:**
+- Commission concept art in different styles
+- Look at historical maps and illustrations for inspiration
+- Consider how style affects tone (too whimsical undermines serious themes)
 
 ### Audio
-- Period-appropriate music
+- Period-appropriate music (but not intrusive)
 - Environmental sounds (forests, ocean, settlement bustle)
 - Seasonal audio changes
+- Consider: music that reflects colony's moral character?
 
 ### UI Philosophy
 - Clean, readable, not cluttered
 - Information available but not overwhelming
 - Advisors/notifications for important events
+- Period-appropriate aesthetic (parchment, ink, wax seals)
+- Maps integrated into UI (your cartography is your interface)
 
 ---
 
-## 8. Technical Considerations (For Later)
+## 9. Technical Considerations (For Later)
 
 ### Platform
 - PC first (Windows, Mac, Linux)
@@ -322,34 +585,58 @@ Then iterate and expand.
 
 ---
 
-## 9. Open Questions
+## 10. Decisions Made
 
-1. **Real history or alt-history?** - Specific nations (England, Spain, France) or fictional powers?
+These questions have been resolved:
 
-2. **Map generation** - Procedural or hand-crafted scenarios?
+| Question | Decision |
+|----------|----------|
+| Real vs. alt-history | **Real history** - England, Spain, France, etc. Educational value. |
+| Map generation | **Hand-crafted maps** with fog of war and cartography system |
+| Multiple colonies | **Single colony for MVP**, Manor Lords-style expansion later |
+| Multiplayer | **No** - Single player only for now |
+| Mod support | **No** - Not a priority for MVP |
+| Tone on colonialism | **Honest and complex** - See Section 5 |
+| Tone overall | **Hopeful like Banished**, not heavy like Frostpunk |
 
-3. **Multiple colonies?** - Manage one colony or eventually multiple settlements?
+## 11. Open Questions (Remaining)
 
-4. **Multiplayer?** - Solo only or competitive/cooperative multiplayer?
+1. **Difficulty modes** - How do we scale challenge? Fewer resources? More aggressive natives/rivals? Harsher winters?
 
-5. **Mod support?** - Priority for community content?
+2. **Starting scenarios** - Which colonial power do you play? Different starts for England vs. Spain vs. France?
 
-6. **Tone on colonialism** - How directly do we address historical atrocities? Do we allow slavery? (Recommend: no, or only as a system you must abolish)
+3. **Time period** - Exact years? 1580-1680? 1600-1776? Does it extend to American Revolution?
 
-7. **Difficulty modes** - How do we scale challenge?
+4. **Specific nations represented** - Which native nations? Which colonial powers? How many of each?
+
+5. **Tech stack** - Which game engine? (See Section 9)
+
+6. **Visual style confirmation** - Need concept art exploration before committing
 
 ---
 
-## 10. Next Steps
+## 12. Next Steps
 
-1. **Refine this document** - Answer open questions, add detail where needed
-2. **Create detailed system specs** - Deep dive on each major system
-3. **Choose tech stack** - Engine, language, tools
-4. **Prototype core loop** - Colonists, needs, building, seasons
-5. **Playtest and iterate** - Is it fun?
+### Immediate
+1. ~~Answer open questions~~ → Most resolved (see Section 10)
+2. **Explore visual style** - Gather references, possibly commission concept art
+3. **Choose tech stack** - Engine decision needed before prototyping
+
+### Prototype (Vertical Slice)
+4. **Basic map** with resources and fog of war
+5. **Colonists** with needs (food, shelter, warmth)
+6. **Building placement** (Tier 1-2 buildings)
+7. **Simple production chains** (wood → lumber, etc.)
+8. **One year of seasons** with effects
+9. **Basic native contact** (trade, simple relations)
+
+### Then Iterate
+10. Playtest core loop - Is it fun?
+11. Add complexity based on what works
+12. Revisit scope based on learnings
 
 ---
 
-*Document Version: 0.1*
-*Last Updated: 2026-01-29*
-*Status: Initial Draft - Ready for Feedback*
+*Document Version: 0.2*
+*Last Updated: 2026-01-30*
+*Status: Core decisions made, ready for visual exploration and tech stack selection*
