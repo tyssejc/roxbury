@@ -1,5 +1,5 @@
 # Discovery Colony
-## Game Design Document v0.2
+## Game Design Document v0.3
 
 ---
 
@@ -520,31 +520,34 @@ This could be what separates Discovery Colony from other games in the genre.
 
 ### Visual Style (Under Exploration)
 
-We want a **distinctive visual identity**, not generic realism. Current direction to explore:
+We want a **distinctive visual identity**, not generic realism. The goal is a style that's immediately recognizable and uniquely ours.
 
-**Belgian Graphic Novel Inspiration**
-- Hergé (Tintin) - Clean lines, clear colors, readable at any scale
-- Moebius - Epic landscapes, detailed worlds
-- *Ground of Aces* - Modern example of this aesthetic in games
+**Key Constraints:**
+- Distinctive, not generic
+- Stylized, but NOT cartoonish
+- Supports serious themes without undermining them
+- Period-appropriate feel
 
-**Potential Characteristics:**
-- Strong ink-like outlines
-- Flat or limited color palettes
-- Stylized but not cartoonish
-- Period-appropriate feel (like illustrations from the era)
-- Distinctive, immediately recognizable
+**Reference Point:**
+- *Ground of Aces* - Appreciated for having a distinct visual identity (happens to draw from Belgian graphic novels, but the distinctiveness is the key quality)
 
-**Why This Direction:**
+**Characteristics to Explore:**
+- Strong visual identity that photographs well and is instantly recognizable
+- Style that supports the "historical document" feeling
+- Readable at various zoom levels (important for city-builders)
+- Connects naturally to the cartography system
+
+**Why Distinctive Style Matters:**
 - Unique in the city-builder genre
-- Connects to the cartography system (maps as art)
-- Easier to produce than photorealism
+- Easier to produce than photorealism (important for indie scope)
 - Ages better than attempts at realism
-- Supports the "historical document" feeling
+- Marketing advantage—screenshots are memorable
 
 **To Explore Further:**
-- Commission concept art in different styles
-- Look at historical maps and illustrations for inspiration
-- Consider how style affects tone (too whimsical undermines serious themes)
+- Research games with strong visual identities across genres
+- Look at historical maps and period illustrations for inspiration
+- Consider how style affects tone (must support serious themes)
+- Owner to do independent research and bring back references
 
 ### Audio
 - Period-appropriate music (but not intrusive)
@@ -561,25 +564,51 @@ We want a **distinctive visual identity**, not generic realism. Current directio
 
 ---
 
-## 9. Technical Considerations (For Later)
+## 9. Technical Considerations
 
 ### Platform
-- PC first (Windows, Mac, Linux)
-- Potential console port later
+- **Primary:** macOS, Linux
+- **Secondary:** Windows (will still support, just not the priority)
+- Console ports: not in scope for MVP
 
-### Engine Options
-- **Godot** - Free, open source, good for learning
-- **Unity** - Industry standard, lots of resources
-- **Unreal** - Powerful but steep learning curve
-- **Custom** - Maximum control, maximum effort
+### Engine: Godot 4 (Confirmed)
+
+**Why Godot:**
+- **Open source (MIT license)** - No licensing surprises, no runtime fees, aligns with values
+- **First-class macOS/Linux support** - Not an afterthought
+- **Beginner-friendly** - GDScript is Python-like, scene/node system is intuitive
+- **Right-sized** - Not overkill like Unreal, not corporate like Unity
+- **Perfect for colony sims** - Built-in TileMap, A* pathfinding, good 2D support
+- **Growing community** - Especially post-Unity pricing controversy
+
+**What We Need (Godot Has):**
+| Requirement | Godot Feature |
+|-------------|---------------|
+| Tile/grid-based maps | TileMap system |
+| Pathfinding | AStar2D built-in |
+| Entity management | Node/Scene system |
+| UI for stats/resources | Control nodes |
+| 2D or isometric graphics | Excellent 2D renderer |
+| Save/load | Resource serialization |
+
+**What We DON'T Need:**
+- Realistic physics engine
+- Complex 3D rendering
+- Massive multiplayer networking
+- AAA graphics pipeline
+
+### Language
+- **GDScript** for gameplay logic (fast iteration, easy to learn)
+- **C#** available if we need performance later
+- **GDExtension** for any native code needs (unlikely for MVP)
 
 ### Scope Management
 Start with a vertical slice:
-1. Basic map with resources
-2. Colonists with needs
-3. Building placement
-4. Simple production chains
-5. One year of seasons
+1. Basic map with resources and fog of war
+2. Colonists with needs (food, shelter, warmth)
+3. Building placement (Tier 1-2 buildings)
+4. Simple production chains (wood → lumber)
+5. One year of seasons with effects
 
 Then iterate and expand.
 
@@ -598,6 +627,8 @@ These questions have been resolved:
 | Mod support | **No** - Not a priority for MVP |
 | Tone on colonialism | **Honest and complex** - See Section 5 |
 | Tone overall | **Hopeful like Banished**, not heavy like Frostpunk |
+| Game engine | **Godot 4** - Open source, beginner-friendly, right-sized |
+| Primary platforms | **macOS, Linux** - Windows supported but not prioritized |
 
 ## 11. Open Questions (Remaining)
 
@@ -609,9 +640,7 @@ These questions have been resolved:
 
 4. **Specific nations represented** - Which native nations? Which colonial powers? How many of each?
 
-5. **Tech stack** - Which game engine? (See Section 9)
-
-6. **Visual style confirmation** - Need concept art exploration before committing
+5. **Visual style confirmation** - Need reference exploration before committing
 
 ---
 
@@ -619,24 +648,25 @@ These questions have been resolved:
 
 ### Immediate
 1. ~~Answer open questions~~ → Most resolved (see Section 10)
-2. **Explore visual style** - Gather references, possibly commission concept art
-3. **Choose tech stack** - Engine decision needed before prototyping
+2. ~~Choose tech stack~~ → Godot 4 confirmed
+3. **Explore visual style** - Owner researching distinctive game aesthetics
+4. **Set up Godot project** - Basic project structure, version control
 
 ### Prototype (Vertical Slice)
-4. **Basic map** with resources and fog of war
-5. **Colonists** with needs (food, shelter, warmth)
-6. **Building placement** (Tier 1-2 buildings)
-7. **Simple production chains** (wood → lumber, etc.)
-8. **One year of seasons** with effects
-9. **Basic native contact** (trade, simple relations)
+5. **Basic map** with resources and fog of war
+6. **Colonists** with needs (food, shelter, warmth)
+7. **Building placement** (Tier 1-2 buildings)
+8. **Simple production chains** (wood → lumber, etc.)
+9. **One year of seasons** with effects
+10. **Basic native contact** (trade, simple relations)
 
 ### Then Iterate
-10. Playtest core loop - Is it fun?
-11. Add complexity based on what works
-12. Revisit scope based on learnings
+11. Playtest core loop - Is it fun?
+12. Add complexity based on what works
+13. Revisit scope based on learnings
 
 ---
 
-*Document Version: 0.2*
+*Document Version: 0.3*
 *Last Updated: 2026-01-30*
-*Status: Core decisions made, ready for visual exploration and tech stack selection*
+*Status: Tech stack confirmed (Godot 4), visual style exploration in progress*
